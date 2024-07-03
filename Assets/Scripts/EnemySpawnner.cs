@@ -10,7 +10,7 @@ public class EnemySpawnner : MonoBehaviour
     void Start()
     {
         Timer = 0;
-        ObjectEnemy(-6, 6);
+        ObjectEnemy(-7.4f, 6);
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class EnemySpawnner : MonoBehaviour
         Timer += Time.deltaTime;
         if (Timer > 1)
         {
-            ObjectEnemy(-6, 6);
+            ObjectEnemy(-7.4f, 6);
             Timer = 0;
         }
     }

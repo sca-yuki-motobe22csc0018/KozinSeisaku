@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDefault : MonoBehaviour
@@ -22,9 +23,7 @@ public class EnemyDefault : MonoBehaviour
             return;
         }
         transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
-        //Debug.Log(moveStart);
-
-
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
